@@ -40,7 +40,38 @@ function getWinner(playerMove,computerMove) {
     // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
-    /* YOUR CODE HERE */
+    switch (playerMove+computerMove) {
+        case 'rockrock':
+            winner = 'tie';
+            break;
+        case 'rockpaper':
+            winner = 'computer';            
+            break;
+        case 'rockscissors':
+            winner = 'player';
+            break;
+        case 'paperrock':
+            winner = 'player';
+            break;
+        case 'paperpaper':
+            winner = 'tie';
+            break;
+        case 'paperscissors':
+            winner = 'computer';
+            break;
+        case 'scissorsrock':
+            winner = 'computer';
+            break;
+        case 'scissorspaper':
+            winner = 'player';
+            break;
+        case 'scissorsscissors':
+            winner = 'tie';
+            break;
+    }
+
+
+    }
     return winner;
 }
 
